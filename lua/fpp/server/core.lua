@@ -34,9 +34,11 @@ Prevents spawning a prop or effect when its model is blocked
 ---------------------------------------------------------------------------*/
 local function propSpawn(ply, model)
     local blocked, msg = isBlocked(model)
-    if blocked && !FPP.Settings.FPP_BLOCKMODELSETTINGS1.adminscanspawn then
-        FPP.Notify(ply, msg, false)
-        return false
+    if blocked then
+        if not (FPP.Settings.FPP_BLOCKMODELSETTINGS1.adminscanspawn) then
+            FPP.Notify(ply, msg, false)
+            return false  
+        end
     end
 end
 hook.Add("PlayerSpawnObject", "FPP_SpawnEffect", propSpawn) -- prevents precaching

@@ -308,6 +308,7 @@ function FPP.AdminMenu(Panel)
     addchk("Blocked models enabled", {"FPP_BLOCKMODELSETTINGS1", "toggle"}, blockedmodels)
     addchk("Apply to props only", {"FPP_BLOCKMODELSETTINGS1", "propsonly"}, blockedmodels)
     addchk("The blocked models list is a white list", {"FPP_BLOCKMODELSETTINGS1", "iswhitelist"}, blockedmodels)
+    addchk("Admins can spawn blocked models", {"FPP_BLOCKMODELSETTINGS1", "adminscanspawn"}, blockedmodels)
 
     local BlockedModelsAddLA = blockedmodels:Add("DButton")
     BlockedModelsAddLA:SetText("Add model of entity you're looking at")
