@@ -34,7 +34,7 @@ Prevents spawning a prop or effect when its model is blocked
 ---------------------------------------------------------------------------*/
 local function propSpawn(ply, model)
     local blocked, msg = isBlocked(model)
-    if blocked then
+    if blocked && !FPP.Settings.FPP_BLOCKMODELSETTINGS1.adminscanspawn then
         FPP.Notify(ply, msg, false)
         return false
     end

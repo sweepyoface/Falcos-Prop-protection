@@ -86,7 +86,8 @@ FPP.Settings.FPP_ANTISPAM1 = {
 FPP.Settings.FPP_BLOCKMODELSETTINGS1 = {
 	toggle = 1,
 	propsonly = 0,
-	iswhitelist = 0
+	iswhitelist = 0,
+	adminscanspawn = 0
 }
 
 function FPP.ForAllSettings(fn)
